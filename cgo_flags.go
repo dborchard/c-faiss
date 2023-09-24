@@ -1,8 +1,8 @@
 package faiss
 
-//#cgo CPPFLAGS: -Iinternal/c_api -Iinternal/faiss
-//#cgo CFLAGS: -Iinternal/c_api -Iinternal/faiss
+//#cgo CPPFLAGS: -Iinternal/c_api
+//#cgo CFLAGS: -Iinternal/c_api
 // #cgo darwin LDFLAGS: -Wl,-undefined -Wl,dynamic_lookup
 // #cgo !darwin LDFLAGS: -Wl,-unresolved-symbols=ignore-all
-// #cgo darwin LDFLAGS: -lfaiss_c -lfaiss
+// #cgo LDFLAGS: -lfaiss_c -lfaiss
 import "C"
