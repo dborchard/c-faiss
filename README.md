@@ -33,4 +33,6 @@ to point to the new version (just change the URL), and then run it.
 ### Credits
 
 This package was inspired by the [cockroachdb](https://github.com/cockroachdb) teams
-[c-rocksdb](https://github.com/cockroachdb/c-rocksdb) project wrapping the RocksDB library.
+[c-rocksdb](https://github.com/cockroachdb/c-rocksdb) project and 
+[couchbaselabs](https://github.com/couchbaselabs) teams [c-forestdb](https://github.com/couchbaselabs/c-forestdb)
+wrapping the RocksDB and ForestDB library.
