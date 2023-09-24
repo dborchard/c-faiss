@@ -1,3 +1,6 @@
+//go:build !windows
+// +build !windows
+
 package faiss
 
 //#cgo CPPFLAGS: -Iinternal/c_api -Iinternal/faiss
