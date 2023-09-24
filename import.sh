@@ -2,10 +2,10 @@
 
 set -eu
 
-rm -rf *.cc internal/
+rm -rf *.cpp internal/
 git clone https://github.com/facebookresearch/faiss internal
 
-## symlink so cgo compiles them
-#for source_file in $(make sources); do
-#    cp $source_file .
-#done
+# symlink so cgo compiles them
+for source_file in $(make sources); do
+    cp $source_file .
+done

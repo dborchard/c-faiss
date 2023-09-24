@@ -1,45 +1,27 @@
-LIB_SOURCES =                             \
-          src/api_wrapper.cc        			\
-          src/avltree.cc            			\
-          src/bgflusher.cc          			\
-          src/blockcache.cc         			\
-          src/btree.cc              			\
-          src/btree_kv.cc           			\
-          src/btree_str_kv.cc       			\
-          src/btree_fast_str_kv.cc  			\
-          src/btreeblock.cc         			\
-          src/checksum.cc           			\
-          src/compactor.cc          			\
-          src/configuration.cc      			\
-          src/docio.cc              			\
-          src/encryption.cc         			\
-          src/encryption_aes.cc     			\
-          src/encryption_bogus.cc   			\
-          src/fdb_errors.cc         			\
-          src/filemgr.cc            			\
-          src/filemgr_ops.cc        			\
-					src/filemgr_ops_linux.cc        \
-					src/filemgr_ops_windows.cc      \
-          src/forestdb.cc           			\
-          src/hash.cc               			\
-          src/hash_functions.cc     			\
-          src/hbtrie.cc             			\
-          src/iterator.cc           			\
-          src/kv_instance.cc        			\
-          src/list.cc               			\
-          src/snapshot.cc           			\
-          src/staleblock.cc         			\
-          src/superblock.cc         			\
-          src/transaction.cc        			\
-          src/version.cc            			\
-          src/wal.cc                			\
-					utils/debug.cc									\
-					utils/system_resource_stats.cc	\
-					utils/time_utils.cc							\
-					utils/crc32.cc									\
-					utils/partiallock.cc						\
+LIB_SOURCES =                               \
+c_api/AutoTune_c.cpp       			\
+c_api/clone_index_c.cpp            	\
+c_api/Clustering_c.cpp            	\
+c_api/error_impl.cpp	          	\
+c_api/Index_c.cpp	            	\
+c_api/index_factory_c.cpp         	\
+c_api/index_io_c.cpp            	\
+c_api/IndexBinary_c.cpp            	\
+c_api/IndexFlat_c.cpp            	\
+c_api/IndexIVF_c.cpp            	\
+c_api/IndexIVFFlat_c.cpp          	\
+c_api/IndexLSH_c.cpp	          	\
+c_api/IndexIVFFlat_c.cpp          	\
+c_api/IndexPreTransform_c.cpp      	\
+c_api/IndexReplicas_c.cpp          	\
+c_api/IndexScalarQuantizer_c.cpp   	\
+c_api/IndexShards_c.cpp			   	\
+c_api/MetaIndexes_c.cpp			   	\
+c_api/VectorTransform_c.cpp		   	\
+c_api/impl/AuxIndexStructures_c.cpp	\
+c_api/utils/distances_c.cpp			\
 
 sources:
-						@for source_file in $(LIB_SOURCES); do \
-							echo internal/$$source_file; \
-						done
+	@for source_file in $(LIB_SOURCES); do \
+		echo internal/$$source_file; \
+	done
