@@ -15,7 +15,6 @@ import _ "github.com/arjunsk/c-faiss"
 #cgo CPPFLAGS: -I ../../arjunsk/c-faiss/internal/c_api
 #cgo darwin LDFLAGS: -Wl,-undefined -Wl,dynamic_lookup
 #cgo !darwin LDFLAGS: -Wl,-unresolved-symbols=ignore-all
-#include <libforestdb/forestdb.h>
 
 #include <stdlib.h>
 #include <Clustering_c.h>
