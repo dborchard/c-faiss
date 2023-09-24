@@ -37,6 +37,7 @@ set(FAISS_SRC
   IndexPQ.cpp
   IndexFastScan.cpp
   IndexAdditiveQuantizerFastScan.cpp
+  IndexIVFIndependentQuantizer.cpp
   IndexPQFastScan.cpp
   IndexPreTransform.cpp
   IndexRefine.cpp
@@ -71,6 +72,7 @@ set(FAISS_SRC
   impl/pq4_fast_scan.cpp
   impl/pq4_fast_scan_search_1.cpp
   impl/pq4_fast_scan_search_qbs.cpp
+  impl/residual_quantizer_encode_steps.cpp
   impl/io.cpp
   impl/lattice_Zn.cpp
   impl/NNDescent.cpp
@@ -113,6 +115,7 @@ set(FAISS_HEADERS
   IndexIDMap.h
   IndexIVF.h
   IndexIVFAdditiveQuantizer.h
+  IndexIVFIndependentQuantizer.h
   IndexIVFFlat.h
   IndexIVFPQ.h
   IndexIVFFastScan.h
@@ -169,6 +172,7 @@ set(FAISS_HEADERS
   impl/lattice_Zn.h
   impl/platform_macros.h
   impl/pq4_fast_scan.h
+  impl/residual_quantizer_encode_steps.h
   impl/simd_result_handlers.h
   impl/code_distance/code_distance.h
   impl/code_distance/code_distance-generic.h
@@ -190,6 +194,7 @@ set(FAISS_HEADERS
   utils/hamming.h
   utils/ordered_key_value.h
   utils/partitioning.h
+  utils/prefetch.h
   utils/quantize_lut.h
   utils/random.h
   utils/simdlib.h
