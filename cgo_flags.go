@@ -4,5 +4,5 @@ package faiss
 //#cgo CFLAGS: -Iinternal/c_api
 // #cgo darwin LDFLAGS: -Wl,-undefined -Wl,dynamic_lookup
 // #cgo !darwin LDFLAGS: -Wl,-unresolved-symbols=ignore-all
-// #cgo LDFLAGS: -lfaiss_c -lfaiss
+// #cgo LDFLAGS: -lfaiss_c
 import "C"
